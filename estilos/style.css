@@ -29,7 +29,6 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden; /* Tudo que estiver fora da borda, vai ficar escondido */
 
     background-color: white;
@@ -38,6 +37,7 @@ section#login {
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.451);
 
+    transform: translate(-50%, -50%); /*Todas as transações e transformações colocar aqui no final*/
     transition: width .3s, height .3s;
     transition-timing-function: ease;
 }
@@ -69,12 +69,35 @@ form > div.campo {
     width: 100%;
     display: block;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;
+    padding-bottom: 2px;
 }
 
 div.campo > label {
     display: none;
+}
+
+div.campo > i {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: #94cfcd;
+    font-size: 1em;
+    width: calc(100% - 48px); /* Função de cálculo */
+    height: 87%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-10px);
+}
+
+div.campo > input:focus-within /* Para quando clicar o fundo ficar branco */ {
+    background-color: white;
 }
 
 form > input[type=submit] {
