@@ -98,6 +98,7 @@ div.campo > input {
 
 div.campo > input:focus-within /* Para quando clicar o fundo ficar branco */ {
     background-color: white;
+    outline: none;
 }
 
 form > input[type=submit] {
